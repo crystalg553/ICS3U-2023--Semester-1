@@ -22,29 +22,32 @@ public class BVGpool {
 
         double lengthTransitione = Math.sqrt(transition^2 + (depthDeep - depthShallow)^2); 
 
-        double volumeDeep = depthDeep * width * (length - lengthShallow- lengthTransitionee); 
+        double volumeDeep = depthDeep * width * (length - lengthShallow- lengthTransitione); 
 
         double volumeShallow = depthShallow * width * lengthShallow; 
 
-        double volumeTranstion = depthDeep * width * lengthTransitionee - (1/2 * (depthDeep - depthShallow) * width); 
+        double volumeTranstion = depthDeep * width * lengthTransitione - (1/2 * (depthDeep - depthShallow) * width); 
 
         double totalVolume = volumeDeep + volumeShallow + volumeTranstion; 
 
-        System.out.println(totalVolume); 
+        System.out.println(totalVolume*0.9); 
 
-        double surfaceAreaDeep = 3*(depthDeep *(length - lengthShallow - lengthTransitionee)) + depthDeep * width; }
+        double surfaceAreaDeep = 3*(depthDeep *(length - lengthShallow - lengthTransitione)) + depthDeep * width; 
 
         double surfaceAreaShallow = depthShallow * lengthShallow * width; 
 
-        double surfaceAreaTransition = lengthTransitionee * width + 2 * depthShallow * lengthTransitionee + (depthDeep - depthShallow)*lengthTransitionee; 
+        double surfaceAreaTransition = lengthTransitione * width + 2 * depthShallow * lengthTransitione + (depthDeep - depthShallow)*lengthTransitione; 
 
         double totalSurfaceArea = surfaceAreaDeep + surfaceAreaShallow + surfaceAreaTransition; 
 
         System.out.println(totalSurfaceArea);
+         System.out.println(totalSurfaceArea*2
+         );
+        
 
-
-
+        s.close();
     }
+
 }
 
         
