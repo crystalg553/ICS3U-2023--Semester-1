@@ -41,8 +41,8 @@ public class BVGpool {
         double totalSurfaceArea = surfaceAreaDeep + surfaceAreaShallow + surfaceAreaTransition; 
 
         System.out.println(totalSurfaceArea);
-         System.out.println(totalSurfaceArea*2
-         );
+
+         System.out.println(totalSurfaceArea*linerPrice);
         
 
         s.close();
